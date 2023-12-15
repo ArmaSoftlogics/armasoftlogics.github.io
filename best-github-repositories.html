@@ -11,10 +11,11 @@
          text-align: center;
        left: 0; top: 0; right: 0; 
     position: fixed; width: device-width;
-      padding: 3vh;
-      background-color: limegreen;
+      padding: 10px; height: 40px;
+      background: linear-gradient(to right , blue, red); -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
       font-family: Georgia;
-      font-size: 3.5vw;
+      font-size: 0.9rem;
       color: blue; font-weight: bolder;
       text-shadow: 5px 5px 4px red;
       animation-name: header;
@@ -22,9 +23,9 @@
       animation-iteration-count: infinite;}
       @keyframes header {
         0% {text-shadow: 5px 5px 4px red;}
-        25% {text-shadow: -5px -5px 4px red;}
-        50% {text-shadow: 15px -15px 2px red;}
-        75% {text-shadow: -15px 15px 2px red;}
+        25% {text-shadow: 0px -5px 4px red;}
+        50% {text-shadow: 30px 30px 2px red;}
+        75% {text-shadow: -30px 30px 2px red;}
         100% {text-shadow: 5px 5px 4px red;}}
       
       #footer {
@@ -39,7 +40,7 @@
        background: linear-gradient(to right , blue, red); -webkit-background-clip: text;
        -webkit-text-fill-color: transparent;
       font-family: Georgia;}
-     .maindiv {margin-top: 10vh; border-bottom: 2px solid blue; margin-bottom: 25px; 
+     .maindiv {margin-top: 65px; border-bottom: 2px solid blue; margin-bottom: 25px; 
      }
      #LastUpdated {
        text-align: right;
