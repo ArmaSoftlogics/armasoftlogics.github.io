@@ -6,27 +6,29 @@
     <title>Best GitHub Repositories List by Arma Softlogics</title>
     <style>
     body {
-      background-color: powderblue;font-family: Georgia;}
+      background-color: powderblue; font-family: Georgia;}
       #header {
          text-align: center;
        left: 0; top: 0; right: 0; 
     position: fixed; width: device-width;
-      padding: 10px; height: 40px;
-      background: linear-gradient(to right , blue, red); -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent;
-      font-family: Georgia;
-      font-size: 0.9rem;
-      color: blue; font-weight: bolder;
-      text-shadow: 5px 5px 4px red;
-      animation-name: header;
-      animation-duration: 10s;
-      animation-iteration-count: infinite;}
+      padding: 5px; height: 50px;
+      background-color: limegreen;
+     }
       @keyframes header {
         0% {text-shadow: 5px 5px 4px red;}
         25% {text-shadow: 0px -5px 4px red;}
-        50% {text-shadow: 20px 20px 2px red;}
-        75% {text-shadow: -20px 20px 2px red;}
+        50% {text-shadow: 15px 15px 2px red;}
+        75% {text-shadow: -15px 15px 2px red;}
         100% {text-shadow: 5px 5px 4px red;}}
+
+        .hp {
+          background: linear-gradient(to right , blue, red); -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+      font-family: Georgia; font-size: 0.9rem; font-weight: bolder;
+         text-shadow: 5px 5px 4px red;
+      animation-name: header;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;}
       
       #footer {
         position: fixed;
@@ -61,7 +63,7 @@
     </head>
     <body>
       <header id="header">
-        Best GitHub Repositories List by Arma Softlogics
+        <p class="hp">Best GitHub Repositories List by Arma Softlogics</p>
         
       </header>
       <div class="maindiv">
@@ -83,7 +85,8 @@
   
   
 </ul>
-        
+
+
 
 </div>
 <!-- Content div ends here -->
