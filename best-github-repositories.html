@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best GitHub Repositories List by Arma Softlogics</title>
+    <style>
+    body {
+      background-color: powderblue;font-family: Georgia;}
+      #header {
+         text-align: center;
+       left: 0; top: 0; right: 0; 
+    position: fixed; width: device-width;
+      padding: 3vh;
+      background-color: limegreen;
+      font-family: Georgia;
+      font-size: 3.5vw;
+      color: blue; font-weight: bolder;
+      text-shadow: 5px 5px 4px red;
+      animation-name: header;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;}
+      @keyframes header {
+        0% {text-shadow: 5px 5px 4px red;}
+        25% {text-shadow: -5px -5px 4px red;}
+        50% {text-shadow: 15px -15px 2px red;}
+        75% {text-shadow: -15px 15px 2px red;}
+        100% {text-shadow: 5px 5px 4px red;}}
+      
+      #footer {
+        position: fixed;
+   left: 0; right: 0;
+   bottom: 0;
+   width: device-width;
+   background-color: #c2a75d;
+   text-align: center; padding: 1vh;}
+   #foootertext { font-size: 1vw;
+       text-decoration: none; 
+       background: linear-gradient(to right , blue, red); -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+      font-family: Georgia;}
+     .maindiv {margin-top: 10vh; border-bottom: 2px solid blue; margin-bottom: 25px; 
+     }
+     #LastUpdated {
+       text-align: right;
+     }
+     .new {
+       border-bottom: 0.8px dashed blue; 
+       margin-bottom: 20px;
+     }
+     .whatsnew {
+       color: blue;
+       font-size: 0.9rem;
+     }
+     .spannew {
+       color: black;
+       font-size: 0.6rem;
+     }
+    </style>
+    </head>
+    <body>
+      <header id="header">
+        Best GitHub Repositories List by Arma Softlogics
+        
+      </header>
+      <div class="maindiv">
+        
+     <p id="LastUpdated"></p>
+        </div>
+        
+        <!-- Content div by Arma Softlogics-->
+        <div id="content">
+          <p class="new"><span class="whatsnew">What is new:<span class="spannew">
+            Downloader Seal app added.
+          </span></p>
+       <p>The Arma Softlogics team presents a dynamic compendium of the most impactful GitHub repositories.</p>
+       <h4>Best GitHub Repositories:</h4>
+
+<ul>
+  <li>Seal:</li>
+  A video/audio downloader that supports most of the links from various websites.<br><a href="https://github.com/JunkFood02/Seal/releases">Download now</a>
+  
+  
+</ul>
+        
+
+</div>
+<!-- Content div ends here -->
+      
+      <footer id="footer"><a id="foootertext" href="https://armasoftlogics.blogspot.com">Arma Softlogics&nbsp;•&nbsp;2023 - Present</a></footer>
+      
+      <script>
+        const LastDate = new Date(document.lastModified);
+        const dAte = LastDate.toLocaleDateString("en-US", {day: "numeric", month: "long", year: "numeric",});
+        
+        const LastUpdated = document.getElementById("LastUpdated");
+LastUpdated.innerHTML = `Last updated: ${dAte}`;
+
+        
+      </script>
+    </body>
