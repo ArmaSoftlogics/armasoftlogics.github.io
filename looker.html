@@ -2,20 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Looker. Looker by Arma Softlogics. Only w3schools search result. Search only w3schools. Show only w3schools.">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Looker by Arma Softlogics simplifies your search experience by focusing exclusively on W3Schools content.">
+    <meta name="keywords" content="looker, looker app, arma softlogics, arma app, w3schools, w3schools search only, only show w3schools search result">
+    <link rel="icon" href="https://armasoftlogics.github.io/res/looker_favicon.png" type="image/png">
+    <link rel="canonical" href="https://armasoftlogics.github.io/looker">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
     <title>Looker by Arma Softlogics</title>
     <style>
+    
+    
     @import url('https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
     
-    .dt1 {
+    
+    
+    .dt1{
       font-size: 1.5rem;
       font-family: 'Rubik Burned', system-ui;
       color: blue;
     }
     
-      .dd1 {
+      .dd1{
         font-size: x-small;
         font-family: Georgia;
         color: black;
@@ -38,7 +53,7 @@
    
    #disclaimer {
      
-     margin-bottom: 40px;
+     
      font-size: x-small;
      padding-right:10px;
      padding-left: 10px;
@@ -66,8 +81,26 @@
     
    }
    
-   legend {
+   #disclaimers{
+              padding-right:10px;
+     padding-left: 10px;
+   }
+   
+   #eFS{
+   box-shadow: 10px 10px 10px red;
+  
+   }
+   
+   #dFS{
+        box-shadow: -10px 10px 10px blue;
+   }
+   
+   #eL{
      text-align: left;
+   }
+   
+   #dL{
+     text-align:right;
    }
    
    #content{
@@ -76,17 +109,42 @@
     margin-top: 20dvh;
     
    }
+   #header{
+     display:flex;
+   }
+   
+   #bt{
+     margin-left:auto;
+   }
+   
+   #reloaD{
+          font-family: Georgia ;
+           color: blue;
+       border-radius: 5px;
+       border-width:0;
+   }
+   
+   span:active{
+     font-size: 20px;
+     color: red;
+   }
       
-      
+
+  
     </style>
 </head>
 <body>
-
+<div id="header">
    <dl>
      <dt class="dt1">Looker 🔍</dt>
      <dd class="dd1">by&nbsp;<a href="https://armasoftlogics.blogspot.com">Arma Softlogics</a></dd>
    </dl>
-   
+   <div id="bt">
+   <button type="button" id="reloaD" onclick="location.reload();"><span class="material-icons">
+refresh
+</span></button>
+   </div>
+</div>
     
     <script async src="https://cse.google.com/cse.js?cx=25c66de693128411c">
 </script>
@@ -94,19 +152,30 @@
 <div id="content">
 
 <div id="editors">
-    <fieldset>
-      <legend>Code Runners</legend>
+    <fieldset id="eFS">
+      <legend id="eL">Code Runners</legend>
     
         <a href="https://codepen.io/pen/">Codepen Code Runner</a>
   <br><br>
         <a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">W3Schools Code Runner</a>
     </fieldset>
   </div>
-  <div id="disclaimer"><details>
+  <div id="disclaimers">
+    <fieldset id="dFS">
+      <legend id="dL">Disclaimers</legend>
+  <div id="disclaimer">
+    <details>
     <summary>Disclaimer</summary>
   The content from w3schools.com embedded on this website is the property of w3schools.com. We do not own or claim any rights to the content provided by w3schools.com. The embedded material is utilized for educational purposes. Visitors are encouraged to visit w3schools.com directly for the latest and most up-to-date information.
   </details>
+  <br> <br>
+  <details>
+    <summary>Universal Disclaimer</summary>
+    This website may contain elements, contents, references, etc from various sources that are not owned or claimed by us. All such materials belong to their respective owners.
+  </details>
   </div>
+  </div>
+  </fieldset>
   </div>
 
 <footer>
