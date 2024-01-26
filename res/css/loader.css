@@ -17,7 +17,8 @@
             border-radius: 20px;
             transform: translate(-50%, -50%) rotate(0deg); 
             box-shadow: 5px 5px 5px blue;
-            animation: rotate 1s linear infinite;}
+            animation: rotate 1s linear infinite;
+            pointer-events: none;}
         
 
         @keyframes rotate {
