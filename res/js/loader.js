@@ -15,7 +15,7 @@ if (imgLoader) {
             }
   
  
- document.addEventListener("DOMContentLoaded", function() {
+ document.addEventListener("load", function() {
            setTimeout(function (){ document.getElementsByClassName("loaderOverlay")[0].style.display = "none";}, 2000); }); 
            
            
