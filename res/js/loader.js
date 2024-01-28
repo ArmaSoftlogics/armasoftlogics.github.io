@@ -16,7 +16,7 @@ if (imgLoader) {
   
  
  window.addEventListener("load", function() {
-           setTimeout(function (){ document.getElementsByClassName("loaderOverlay")[0].style.display = "none";}, 2000); }); 
+           setTimeout(function (){ document.getElementsByClassName("loaderOverlay")[0].style.display = "none";           window.scrollTo({ top: 0 });}, 2000); }); 
            
            
 
