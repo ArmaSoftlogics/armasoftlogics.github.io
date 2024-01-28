@@ -1,5 +1,8 @@
       .loaderOverlay{
+        display: flex;
         position: fixed;
+        justify-content: center;
+        align-items: center;
         z-index: 999;
         top:0;
         bottom:0;
@@ -10,9 +13,6 @@
       
       .loader{
             pointer-events: none;
-            top: 50%;
-            left: 50%;
-            position: absolute;
             width: 10dvw;
             height: 10dvw;
             border-radius: 50%;
@@ -22,12 +22,9 @@
         
       .loaderError{
             pointer-events: none;
-            top: 50%;
-            left: 50%;
             height: 10dvw;
             width: 10dvw;
             box-shadow: 0px 0px 10px blue;
-            position: absolute;
             border-radius: 50%;
             transform: translate(-50%, -50%) rotate(0deg); 
             animation: rotate 1s linear infinite;}
@@ -37,70 +34,4 @@
         @keyframes rotate {
             100% { transform: translate(-50%, -50%) rotate(360deg);}} 
             
-            
-
-/*
- 🤟 You are free to use this Loader 🤟 
-  
- 👍 How to add in your website => 
-  
- 👍 (1/2) Copy & paste: 
  
- <link rel="stylesheet" href="https://armasoftlogics.github.io/res/css/loader.css"> 
-    
-   Paste in head tag just before any other stylesheet(css) link in head & also before the style tag starts.
-   
- 👍 (2/2) Copy & paste: 
- 
- <div class="loaderOverlay">
-  <img class="loader" alt="Loading..." src="logo.png" >
-  </div>
-  <script src="https://armasoftlogics.github.io/res/js/loader.js"></script> 
- 
-   Paste in body tag at the starting of the body tag. 
-   
-   
- 
- 👍 Here is an example website: 
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Name</title>
-❤️ <link rel="stylesheet" href="https://armasoftlogics.github.io/res/css/loader.css"> ❤️
-
-  <link rel="stylesheet" href="style.css">
-  
-<style>
-  
-</style>
-   
-</head>
-<body> 
-❤️ <div class="loaderOverlay">
-  <img class="loader" alt="Loading..." src="logo.png" >
-  </div>
-  <script src="https://armasoftlogics.github.io/res/js/loader.js"></script> ❤️ 
-  
- 
- 
-  #Rest of your code#
-  
-
-</body>
-</html>
-  
-  
-  
-  👍 Replace "logo.png" with your actual logo path/url. 
-  
-  👍 Try to avoid using class="loaderOverlay" & class="loader" & class="loaderError" & @keyframes rotate in your other elements. 
- 
-  👍 This loader will work even if you do typo in src in img tag/element. 
-  
-  👍 Giving credits is not compulsory. 
-
-  */
