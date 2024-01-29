@@ -4,25 +4,24 @@ const imgLoader = document.getElementsByClassName("loader")[0];
 
 
 if (imgLoader && imgLoader.tagName.toLowerCase() === 'img') {
+
+
+  if (imgLoader && (!imgLoader.hasAttribute("alt") || imgLoader.getAttribute("alt").trim() === "")) {
+        imgLoader.alt = "Loading...";
+                     }
   
    if (imgLoader && (!imgLoader.hasAttribute("src") || imgLoader.getAttribute("src").trim() === "")) {
         imgLoader.src = "https://armasoftlogics.github.io/res/loading.png";
                         } 
         
 
-
 if (imgLoader) {
              imgLoader.onerror = function() {
              imgLoader.src = "https://armasoftlogics.github.io/res/loading.png";
+             imgLoader.alt = "Loading...";
                 }
             }
-            
-            
-  if (imgLoader && (!imgLoader.hasAttribute("alt") || imgLoader.getAttribute("alt").trim() === "")) {
-        imgLoader.alt = "Loading...";
-                     }
 
-  
 } else {
     
     if (imgLoader) {
