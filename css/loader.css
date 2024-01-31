@@ -12,7 +12,8 @@
       
       
       .loader{
-            pointer-events: none;
+            pointer-events: none; 
+            font-size: xx-small;
             width: 10dvw;
             height: 10dvw;
             border-radius: 50%;
