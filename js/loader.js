@@ -13,7 +13,7 @@ if (imgLoader && imgLoader.tagName.toLowerCase() === 'img') {
    if (imgLoader && (!imgLoader.hasAttribute("src") || imgLoader.getAttribute("src").trim() === "")) {
         imgLoader.style.height = "40px"; 
         imgLoader.style.width = "40px";
-        imgLoader.src = "https://armasoftlogics.github.io/res/loading.png"; 
+        imgLoader.src = "https://armasoftlogics.github.io/files/images/loading.png"; 
                         } 
         
 
@@ -21,7 +21,7 @@ if (imgLoader) {
              imgLoader.onerror = function() {
              imgLoader.style.height = "40px"; 
              imgLoader.style.width = "40px";
-             imgLoader.src = "https://armasoftlogics.github.io/res/loading.png";
+             imgLoader.src = "https://armasoftlogics.github.io/files/images/loading.png";
              imgLoader.alt = "Loading...";
                 }
             }
