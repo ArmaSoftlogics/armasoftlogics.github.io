@@ -1,3 +1,5 @@
+document.body.style.overflow = 'hidden'; 
+
 const overlay = document.getElementsByClassName("loaderOverlay")[0];
 
 const imgLoader = document.getElementsByClassName("loader")[0];
@@ -39,5 +41,5 @@ if (imgLoader) {
   
  
  window.addEventListener("load", function() {
-          if (overlay) { setTimeout(function (){ overlay.style.display = "none"; window.scrollTo({ top: 0 });}, 2000); } }); 
+          if (overlay) { setTimeout(function (){ overlay.style.display = "none";   document.body.style.overflow = 'auto';   window.scrollTo({ top: 0 });}, 2000); } }); 
   
