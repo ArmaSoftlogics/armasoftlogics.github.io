@@ -8,11 +8,11 @@
         bottom:0;
         left:0;
         right:0;
-        background-color: powderblue;
-        overflow: hidden; }
+        background-color: powderblue;  }
       
       
       .loader{
+            position: absolute; 
             pointer-events: none; 
             font-size: xx-small;
             width: 10dvw;
@@ -24,6 +24,7 @@
         
 
        .divLoader{
+            position: absolute; 
             width: 40px;
             height: 40px;
             border: solid 4px white;
