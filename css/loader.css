@@ -1,15 +1,13 @@
-      .loaderOverlay{
-        display: flex;
-        position: fixed;
+      .loaderOverlay{ 
+        position: fixed; 
+        top:0;  
+        bottom:0;  
+        left:0;  
+        right:0;  
+        display: flex;  
         justify-content: center;
         align-items: center;
         z-index: 100000;
-        top:0;
-        bottom:0;
-        left:0;
-        right:0;
-        height: 100%; 
-        width: 100%;
         background-color: powderblue; 
         overflow: hidden; }  
 
@@ -17,8 +15,6 @@
       
       .loader{
             position: absolute; 
-            top: 50%; 
-            left: 50%; 
             pointer-events: none; 
             font-size: xx-small;
             width: 10dvw;
@@ -31,8 +27,6 @@
 
        .divLoader{
             position: absolute; 
-            top: 50%; 
-            left: 50%; 
             width: 40px;
             height: 40px;
             border: solid 4px white;
