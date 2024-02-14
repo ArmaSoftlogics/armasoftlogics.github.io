@@ -1,5 +1,3 @@
-document.body.style.overflow = 'hidden'; 
-
 const overlay = document.getElementsByClassName("loaderOverlay")[0];
 
 const imgLoader = document.getElementsByClassName("loader")[0];
