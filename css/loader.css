@@ -1,3 +1,7 @@
+      body{
+           overflow: hidden; }  
+
+
       .loaderOverlay{ 
         position: fixed; 
         top:0;  
