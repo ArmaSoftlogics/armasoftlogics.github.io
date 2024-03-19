@@ -41,3 +41,23 @@ if (imgLoader) {
  window.addEventListener("load", function() {
           if (overlay) { setTimeout(function (){ overlay.style.display = "none";   document.body.style.overflow = 'auto';   window.scrollTo({ top: 0 });}, 2000); } }); 
   
+
+
+const NoteDiv = document.createElement("div");
+NoteDiv.className = "NoteDiv";
+NoteDiv.innerText = "Loading...";
+if (overlay) {
+overlay.appendChild(NoteDiv); }
+setTimeout(() => {
+    NoteDiv.innerText = "Almost ready";
+  }, 3000);
+setTimeout(() => {
+    NoteDiv.innerText = "Just a moment";
+  }, 10000);  
+setTimeout(() => {
+    NoteDiv.innerText = "Please, check your internet connection.";
+  }, 30000);
+setInterval(() => {
+    NoteDiv.innerText = "JavaScript may be blocked in your browser. Please, check your browser settings.";
+  }, 60000);
+  
