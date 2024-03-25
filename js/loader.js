@@ -17,7 +17,7 @@ setTimeout(() => {
     NoteDiv.innerText = "Slow internet";
   }, 30000);
 setInterval(() => {
-    NoteDiv.innerText = "JavaScript may be blocked in your browser. Please, check your browser settings.";
+    NoteDiv.innerText = "Unexpected. Refresh or try another browser.";
   }, 60000);
 
 
