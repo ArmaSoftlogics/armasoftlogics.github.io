@@ -2,7 +2,7 @@ window.addEventListener('load', function() {
   (function() {
     // ---- CONFIG ----
     if (typeof pkosu === "undefined" || !pkosu) {
-      throw new Error("Please define pkosu on the page before including overlay.js");
+      throw new Error("Please define pkosu on the page before including pko.js");
     }
     const SCRIPT_URL = pkosu;
 
