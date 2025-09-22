@@ -25,21 +25,21 @@ window.addEventListener('load', function() {
     `;
 
     const title = document.createElement("h2");
-    title.innerText = typeof pkTitle !== "undefined" ? pkTitle : "Enter Passkey";
+    title.innerText = typeof pkotitle !== "undefined" ? pkotitle : "Enter Passkey";
 
     const input = document.createElement("input");
     input.type = "password";
-    input.placeholder = typeof pkInput !== "undefined" ? pkInput : "Enter passkey";
+    input.placeholder = typeof pkoinput !== "undefined" ? pkoinput : "Enter passkey";
     input.style.cssText = "padding:8px; width:200px; margin-bottom:10px;";
 
     const button = document.createElement("button");
-    button.innerText = typeof pkButton !== "undefined" ? pkButton : "Submit";
+    button.innerText = typeof pkobutton !== "undefined" ? pkobutton : "Submit";
     button.style.cssText = "padding:8px 16px; cursor:pointer;";
 
     const pkoe = document.createElement("p");
     pkoe.id = "pkoe";
     pkoe.style.cssText = "color:red; display:none; margin-top:10px;";
-    pkoe.innerText = typeof pkError !== "undefined" ? pkError : "Incorrect passkey";
+    pkoe.innerText = typeof pkoerror !== "undefined" ? pkoerror : "Incorrect passkey";
 
     box.appendChild(title);
     box.appendChild(input);
