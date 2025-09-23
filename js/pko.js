@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
     const SCRIPT_URL = pkosu;
 
     // ---- CHECK IF OVERLAY ALREADY EXISTS ----
-    if (document.getElementById('pko')) return; // exit if overlay exists
+    if (document.getElementById('pko')) return; // Exit if overlay exists
 
     // ---- CREATE OVERLAY ----
     const pko = document.createElement("div");
@@ -23,7 +23,7 @@ window.addEventListener('load', function() {
     box.style.cssText = `
       background: #ffffff; padding: 30px; border-radius: 15px; text-align: center;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 400px; width: 90%;
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.1); opacity: 1;
     `;
 
     const title = document.createElement("h2");
@@ -101,7 +101,7 @@ window.addEventListener('load', function() {
     document.body.style.overflow = "hidden";
     pko.addEventListener("transitionend", () => {
       if (pko.style.display === "none") {
-        document.body.style.overflow = "";
+        document.body.style.overflow = "auto"; // Explicitly enable scrolling
       }
     });
 
@@ -127,7 +127,12 @@ window.addEventListener('load', function() {
         method: "POST",
         body: new URLSearchParams({ key: key })
       })
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
       .then(data => {
         if (data.success) {
           pko.style.opacity = "0";
@@ -139,7 +144,7 @@ window.addEventListener('load', function() {
         }
       })
       .catch(() => {
-        pkoe.innerText = typeof pkoerror !== "undefined" ? pkoerror : "Incorrect passkey";
+        pkoe.innerText = typeof pkoerror !== "undefined" ? pkoerror : "Failed to verify passkey";
         pkoe.style.display = "block";
         input.select();
       })
@@ -157,6 +162,5 @@ window.addEventListener('load', function() {
     input.addEventListener("keydown", function(e) {
       if (e.key === "Enter") pkoc();
     });
-
   })();
 });
