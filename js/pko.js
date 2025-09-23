@@ -50,12 +50,23 @@ window.addEventListener('load', function() {
     pko.appendChild(box);
     document.body.appendChild(pko);
 
+    // ---- PREVENT BODY SCROLL ----
+    document.body.style.overflow = "hidden";
+    pko.addEventListener("transitionend", () => {
+      if (pko.style.display === "none") {
+        document.body.style.overflow = "";
+      }
+    });
+
     input.focus();
 
     // ---- FUNCTION TO VERIFY PASSKEY ----
     function pkoc() {
       const key = input.value.trim();
       if (!key) return;
+
+      button.disabled = true;
+      button.innerText = "Loading...";
 
       fetch(SCRIPT_URL, {
         method: "POST",
@@ -67,13 +78,19 @@ window.addEventListener('load', function() {
           pko.style.opacity = "0";
           setTimeout(() => pko.style.display = "none", 500);
         } else {
+          pkoe.innerText = data.message || (typeof pkoerror !== "undefined" ? pkoerror : "Incorrect passkey");
           pkoe.style.display = "block";
           input.select();
         }
       })
       .catch(() => {
+        pkoe.innerText = typeof pkoerror !== "undefined" ? pkoerror : "Incorrect passkey";
         pkoe.style.display = "block";
         input.select();
+      })
+      .finally(() => {
+        button.disabled = false;
+        button.innerText = typeof pkobutton !== "undefined" ? pkobutton : "Submit";
       });
     }
 
