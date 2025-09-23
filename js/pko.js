@@ -27,7 +27,7 @@ window.addEventListener('load', function() {
     `;
 
     const title = document.createElement("h2");
-    title.innerText = typeof pkotitle !== "undefined" ? pkotitle : "Enter Passkey.";
+    title.innerText = typeof pkotitle !== "undefined" ? pkotitle : "Enter Passkey!";
     title.style.cssText = `
       color: #333333; font-family: 'Arial', sans-serif; font-size: 24px;
       margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -35,7 +35,7 @@ window.addEventListener('load', function() {
 
     const input = document.createElement("input");
     input.type = "password";
-    input.placeholder = typeof pkoinput !== "undefined" ? pkoinput : "Enter passkey.";
+    input.placeholder = typeof pkoinput !== "undefined" ? pkoinput : "Enter passkey";
     input.style.cssText = `
       padding: 12px; width: 100%; max-width: 250px; margin-bottom: 15px;
       border: 2px solid #555; border-radius: 8px; background: #f9f9f9;
