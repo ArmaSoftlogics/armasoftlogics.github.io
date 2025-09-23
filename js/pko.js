@@ -23,8 +23,24 @@ window.addEventListener('load', function() {
     box.style.cssText = `
       background: #ffffff; padding: 25px; border-radius: 15px; text-align: center;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 400px; width: 80%;
-      border: 1px solid rgba(0, 0, 0, 0.1); opacity: 1;
+      border: 1px solid rgba(0, 0, 0, 0.1); opacity: 1; position: relative;
     `;
+
+    // ---- ADD HOME ICON ----
+    const pkohi = document.createElement("a");
+    const pkohiu = typeof pkohu !== "undefined" && pkohu ? pkohu : "/";
+    pkohi.href = pkohiu;
+    pkohi.style.cssText = `
+      position: absolute; top: 15px; left: 15px; font-size: 24px; color: #333;
+      text-decoration: none; transition: color 0.3s ease;
+    `;
+    pkohi.innerHTML = "🏠"; // Unicode home icon
+    pkohi.addEventListener("mouseover", () => {
+      pkohi.style.color = "#1e90ff";
+    });
+    pkohi.addEventListener("mouseout", () => {
+      pkohi.style.color = "#333";
+    });
 
     const title = document.createElement("h2");
     title.innerText = typeof pkotitle !== "undefined" ? pkotitle : "Enter PassKey!";
@@ -88,6 +104,7 @@ window.addEventListener('load', function() {
     `;
     document.head.appendChild(styleSheet);
 
+    box.appendChild(pkohi);
     box.appendChild(title);
     box.appendChild(input);
     box.appendChild(document.createElement("br"));
