@@ -3,6 +3,7 @@
 *pko.js:- 
 <script>
 const pkosu = "YOUR_APPS_SCRIPT_WEB_APP_URL";
+const pkohu = "YOUR_HOME_URL"; // optional
 const pkotitle = "Protected Page"; // optional
 const pkoinput = "Enter secret key"; // optional
 const pkobutton = "Unlock"; // optional
