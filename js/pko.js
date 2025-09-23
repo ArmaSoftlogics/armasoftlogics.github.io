@@ -70,8 +70,7 @@ window.addEventListener('load', function() {
         return;
       }
 
-      button.disabled = true;
-      button.innerText = "Loading...";
+      button.innerText = "Verifying";
 
       fetch(SCRIPT_URL, {
         method: "POST",
@@ -94,7 +93,6 @@ window.addEventListener('load', function() {
         input.select();
       })
       .finally(() => {
-        button.disabled = false;
         button.innerText = typeof pkobutton !== "undefined" ? pkobutton : "Submit";
       });
     }
