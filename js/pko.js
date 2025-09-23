@@ -63,7 +63,12 @@ window.addEventListener('load', function() {
     // ---- FUNCTION TO VERIFY PASSKEY ----
     function pkoc() {
       const key = input.value.trim();
-      if (!key) return;
+      if (!key) {
+        pkoe.innerText = "Please enter a passkey";
+        pkoe.style.display = "block";
+        input.focus();
+        return;
+      }
 
       button.disabled = true;
       button.innerText = "Loading...";
