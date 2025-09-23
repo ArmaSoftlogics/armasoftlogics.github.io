@@ -2,7 +2,7 @@ window.addEventListener('load', function() {
   (function() {
     // ---- CONFIG ----
     if (typeof pkosu === "undefined" || !pkosu) {
-      throw new Error("Please define pkosu on the page before including pko.js");
+      throw new Error("Please, define pkosu on the page before including pko.js");
     }
     const SCRIPT_URL = pkosu;
 
@@ -27,7 +27,7 @@ window.addEventListener('load', function() {
     `;
 
     const title = document.createElement("h2");
-    title.innerText = typeof pkotitle !== "undefined" ? pkotitle : "Enter Passkey";
+    title.innerText = typeof pkotitle !== "undefined" ? pkotitle : "Enter Passkey.";
     title.style.cssText = `
       color: #333333; font-family: 'Arial', sans-serif; font-size: 24px;
       margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -35,7 +35,7 @@ window.addEventListener('load', function() {
 
     const input = document.createElement("input");
     input.type = "password";
-    input.placeholder = typeof pkoinput !== "undefined" ? pkoinput : "Enter passkey";
+    input.placeholder = typeof pkoinput !== "undefined" ? pkoinput : "Enter passkey.";
     input.style.cssText = `
       padding: 12px; width: 100%; max-width: 250px; margin-bottom: 15px;
       border: 2px solid #555; border-radius: 8px; background: #f9f9f9;
@@ -75,7 +75,7 @@ window.addEventListener('load', function() {
       color: #ff4d4d; display: none; margin-top: 15px; font-size: 14px;
       animation: shake 0.3s ease;
     `;
-    pkoe.innerText = typeof pkoerror !== "undefined" ? pkoerror : "Incorrect passkey";
+    pkoe.innerText = typeof pkoerror !== "undefined" ? pkoerror : "Incorrect passkey.";
 
     // ---- ADD SHAKE ANIMATION KEYFRAMES ----
     const styleSheet = document.createElement("style");
@@ -111,13 +111,13 @@ window.addEventListener('load', function() {
     function pkoc() {
       const key = input.value.trim();
       if (!key) {
-        pkoe.innerText = "Please enter a passkey";
+        pkoe.innerText = "Please, enter a passkey.";
         pkoe.style.display = "block";
         input.focus();
         return;
       }
 
-      button.innerText = "Verifying";
+      button.innerText = "Verifying...";
       input.disabled = true;
       button.disabled = true;
       button.style.opacity = "0.7"; // Subtle disabled visual
@@ -138,13 +138,13 @@ window.addEventListener('load', function() {
           pko.style.opacity = "0";
           setTimeout(() => pko.style.display = "none", 500);
         } else {
-          pkoe.innerText = data.message || (typeof pkoerror !== "undefined" ? pkoerror : "Incorrect passkey");
+          pkoe.innerText = data.message || (typeof pkoerror !== "undefined" ? pkoerror : "Incorrect passkey.");
           pkoe.style.display = "block";
           input.select();
         }
       })
       .catch(() => {
-        pkoe.innerText = typeof pkoerror !== "undefined" ? pkoerror : "Failed to verify passkey";
+        pkoe.innerText = typeof pkoerror !== "undefined" ? pkoerror : "Failed to verify passkey.";
         pkoe.style.display = "block";
         input.select();
       })
