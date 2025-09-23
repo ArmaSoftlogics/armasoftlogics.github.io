@@ -27,7 +27,7 @@ window.addEventListener('load', function() {
     `;
 
     const title = document.createElement("h2");
-    title.innerText = typeof pkotitle !== "undefined" ? pkotitle : "Enter Passkey!";
+    title.innerText = typeof pkotitle !== "undefined" ? pkotitle : "Enter PassKey!";
     title.style.cssText = `
       color: #333333; font-family: 'Arial', sans-serif; font-size: 24px;
       margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
