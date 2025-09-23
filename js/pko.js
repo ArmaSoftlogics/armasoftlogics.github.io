@@ -51,7 +51,7 @@ window.addEventListener('load', function() {
 
     const input = document.createElement("input");
     input.type = "text";
-    input.placeholder = typeof pkoinput !== "undefined" ? pkoinput : "Enter passkey";
+    input.placeholder = typeof pkoinput !== "undefined" ? pkoinput : "Enter passkey...";
     input.style.cssText = `
       padding: 12px; width: 100%; max-width: 250px; margin-bottom: 15px;
       border: 2px solid #555; border-radius: 8px; background: #f9f9f9;
