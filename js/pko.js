@@ -21,8 +21,8 @@ window.addEventListener('load', function() {
 
     const box = document.createElement("div");
     box.style.cssText = `
-      background: #ffffff; padding: 30px; border-radius: 15px; text-align: center;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 400px; width: 90%;
+      background: #ffffff; padding: 25px; border-radius: 15px; text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); max-width: 400px; width: 80%;
       border: 1px solid rgba(0, 0, 0, 0.1); opacity: 1;
     `;
 
@@ -97,14 +97,6 @@ window.addEventListener('load', function() {
     pko.appendChild(box);
     document.body.appendChild(pko);
 
-    // ---- PREVENT BODY SCROLL ----
-    document.body.style.overflow = "hidden";
-    pko.addEventListener("transitionend", () => {
-      if (pko.style.display === "none") {
-        document.body.style.overflow = "auto"; // Explicitly enable scrolling
-      }
-    });
-
     input.focus();
 
     // ---- FUNCTION TO VERIFY PASSKEY ----
@@ -129,7 +121,7 @@ window.addEventListener('load', function() {
       })
       .then(res => {
         if (!res.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error("Network response was not ok.");
         }
         return res.json();
       })
